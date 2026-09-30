@@ -1,7 +1,7 @@
 # cse210-student-template
 This is the starter code for students in CSE 210.
 
-Hola mi llamo es Isaac again
+completed W02 Prove: Developer—C# Programming Parts 3–5
 
 This repository contains the starter code for many different projects. They are arranged as follows:
 
