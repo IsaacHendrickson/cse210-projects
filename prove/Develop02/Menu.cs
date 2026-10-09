@@ -1,6 +1,6 @@
 class Menu
 {
-    public int processMenu()
+    public int ProcessMenu()
     {
         bool done = false;
         int input = 5;
@@ -9,7 +9,8 @@ class Menu
         Console.WriteLine("(2) Save Journal");
         Console.WriteLine("(3) Load Journal");
         Console.WriteLine("(4) Read Journal");
-        Console.WriteLine("(5) Exit");
+        Console.WriteLine("(5) Delete Entry");
+        Console.WriteLine("(6) Exit");
         //input = Int32.Parse(Console.ReadLine());
 
 

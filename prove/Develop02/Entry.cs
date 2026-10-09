@@ -8,7 +8,7 @@ class Entry
     public string prompt;
     public string response;
 
-    public void getEntry(string input, DateTime dateText)
+    public void GetEntry(string input, DateTime dateText)
     {
         Console.WriteLine(input);
         response = Console.ReadLine();
