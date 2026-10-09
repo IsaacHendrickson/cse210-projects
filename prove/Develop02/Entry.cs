@@ -4,16 +4,16 @@ using System.Xml;
 
 class Entry
 {
-    public string date;
-    public string prompt;
-    public string response;
+    public string _date;
+    public string _prompt;
+    public string _response;
 
     public void GetEntry(string input, DateTime dateText)
     {
         Console.WriteLine(input);
-        response = Console.ReadLine();
-        prompt = input;
-        date = dateText.ToString("yyyy-MM-dd HH:mm:ss");
+        _response = Console.ReadLine();
+        _prompt = input;
+        _date = dateText.ToString("yyyy-MM-dd HH:mm:ss");
     }
 
 }

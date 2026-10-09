@@ -47,7 +47,7 @@ class Program
                 Entry entry = new();
                 randNum = rand.Next(prompts.Count);
                 entry.GetEntry(prompts[randNum], theCurrentTime);
-                journal.entries.Add(entry);
+                journal._entries.Add(entry);
             }else if (input == 2)
             {
                 Console.WriteLine("Save to what file");

@@ -2,8 +2,8 @@ class Menu
 {
     public int ProcessMenu()
     {
-        bool done = false;
-        int input = 5;
+        bool _done = false;
+        int _input = 5;
 
         Console.WriteLine("(1) New entry");
         Console.WriteLine("(2) Save Journal");
@@ -14,16 +14,16 @@ class Menu
         //input = Int32.Parse(Console.ReadLine());
 
 
-        while (!done)
+        while (!_done)
         {
-            input = Int32.Parse(Console.ReadLine());
-            if (input < 1 || input > 5)
+            _input = Int32.Parse(Console.ReadLine());
+            if (_input < 1 || _input > 6)
             {
                 Console.WriteLine("Sorry that it not a valid input, try again");
                 continue;
             }
-            done = true;
+            _done = true;
         }
-        return input;
+        return _input;
     }
 }

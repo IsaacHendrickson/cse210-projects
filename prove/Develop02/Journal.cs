@@ -2,64 +2,64 @@ using System.Diagnostics.Contracts;
 
 class Journal
 {
-    public List<Entry> entries = [];
+    public List<Entry> _entries = [];
 
     public void WriteToFile(string file)
     {
         File.WriteAllText(file, "");
-        foreach(Entry entry in entries)
+        foreach(Entry entry in _entries)
         {
-            bool skipEntry = false;
+            bool _skipEntry = false;
 
             string[] lines = System.IO.File.ReadAllLines(file);
             foreach(string line in lines)
             {
-                if(entry.date == line.Split("|")[0])
+                if(entry._date == line.Split("|")[0])
                 {
-                    skipEntry = true;
+                    _skipEntry = true;
                 }
             }
-            if (!skipEntry)
+            if (!_skipEntry)
             {
-                File.AppendAllText(file, $"{entry.date}|{entry.prompt}|{entry.response}\n");
+                File.AppendAllText(file, $"{entry._date}|{entry._prompt}|{entry._response}\n");
             }
         }
     }
 
     public void ReadJournal()
     {        
-        int index = 1;
-        foreach(Entry entry in entries)
+        int _index = 1;
+        foreach(Entry entry in _entries)
         {
-           Console.WriteLine($"{index}:{entry.date} - {entry.prompt}: {entry.response}"); 
-            index++;
+           Console.WriteLine($"{_index}:{entry._date} - {entry._prompt}: {entry._response}"); 
+            _index++;
         }
     }
     public void LoadJournal(string fileName)
     {
-        entries.Clear();
+        _entries.Clear();
         string[] lines = System.IO.File.ReadAllLines(fileName);
         string[] list = ["", "", ""];
-        foreach (string line in lines)
+        foreach (string _line in lines)
         {
             Entry entry = new();
-            list = line.Split("|");
-            entry.date = list[0];
-            entry.prompt = list[1];
-            entry.response = list[2];
-            entries.Add(entry);
+            list = _line.Split("|");
+            entry._date = list[0];
+            entry._prompt = list[1];
+            entry._response = list[2];
+            _entries.Add(entry);
         }
     }
     public void EditEntry(int index)
     {
         Console.WriteLine("New entry");
-        entries[index+1].response = Console.ReadLine();
+        _entries[index+1]._response = Console.ReadLine();
     } 
     public void DeleteEntry()
     {
         Console.WriteLine("Which entry would you like to delete");
         string indexStr = Console.ReadLine();
         int index = Int32.Parse(indexStr);
-        entries.RemoveAt(index-1);
+        _entries.RemoveAt(index-1);
     }
 }
