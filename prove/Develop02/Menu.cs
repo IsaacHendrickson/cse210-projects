@@ -11,8 +11,6 @@ class Menu
         Console.WriteLine("(4) Read Journal");
         Console.WriteLine("(5) Delete Entry");
         Console.WriteLine("(6) Exit");
-        //input = Int32.Parse(Console.ReadLine());
-
 
         while (!_done)
         {
