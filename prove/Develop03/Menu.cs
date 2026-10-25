@@ -5,8 +5,7 @@ public
     {
         Console.WriteLine("Welcome");
         Console.WriteLine("(1) Practice");
-        Console.WriteLine("(2) Add Scripture");
-        Console.WriteLine("(3) Exit");
+        Console.WriteLine("(2) Exit");
 
         int result = 1;
         while (true)

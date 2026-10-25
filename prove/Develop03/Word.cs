@@ -2,18 +2,45 @@ using System.Runtime.CompilerServices;
 
 class Word
 {
-private
-    string _word;
 
-public
+    private string _word;
+    private bool _hidden = false;
 
-    void HideWord(string word)
+    public Word(string word)
+    {
+        _word = word;
+    }
+
+    public void HideWord()
+    {
+        _hidden = true;
+    }
+
+    public string GetWord()
+    {
+        return _word;
+    }
+
+    public bool IsHidden()
+    {
+        return _hidden;
+    }
+    public void Display()
     {
         string newWord = "";
-        for(int i = 0; i > _word.Length; i++)
+
+        if (!_hidden)
         {
-            newWord += '_';
+            Console.Write(_word + ' ');
         }
-        _word = newWord;
+        else
+        {
+            for(int i = 0; i < _word.Length; i++)
+            {
+                newWord += "_";
+            }
+            //Console.Write(_word.Length);
+            Console.Write(newWord + ' ');
+        }
     }
 }
