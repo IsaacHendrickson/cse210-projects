@@ -7,7 +7,8 @@ class Menu
         Console.WriteLine("(1) Breathing Activity");
         Console.WriteLine("(2) Reflection Activity");
         Console.WriteLine("(3) Listing Activity");
-        Console.WriteLine("(4) Exit");
+        Console.WriteLine("(4) Counting Activity");
+        Console.WriteLine("(5) Exit");
 
 
         int input = Int32.Parse(Console.ReadLine());

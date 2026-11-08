@@ -57,6 +57,18 @@ class BaseActivity
         }
     }
 
+        public void CountUp(int seconds)
+    {
+        int counter = 1;
+        while (counter < seconds + 1)
+        {
+            Console.Write(counter + " sheep");
+            Console.CursorLeft-=7;
+            Thread.Sleep(1000);
+            counter++;
+        }
+    }
+
     public int StartActivity()
     {   
         Console.WriteLine($"Welcome to the {_name}");
