@@ -19,10 +19,8 @@ class ReflectionActivity : BaseActivity
         "What did you learn about yourself through this experience?",
         "How can you keep this experience in mind in the future?"
     ];
-    public ReflectionActivity(string name, string description)
+    public ReflectionActivity(string name, string description) : base(name, description)
     {
-        _name = name;
-        _description = description;
     }
 
 

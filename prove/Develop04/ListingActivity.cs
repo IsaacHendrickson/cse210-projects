@@ -9,10 +9,8 @@ class ListingActivity : BaseActivity
         "When have you felt the Holy Ghost this month?",
         "Who are some of your personal heroes?"
     ];
-    public ListingActivity(string name, string description)
+    public ListingActivity(string name, string description) : base(name, description)
     {
-        _name = name;
-        _description = description;
     }
 
     public void Run()

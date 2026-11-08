@@ -6,6 +6,12 @@ class BaseActivity
     protected string _description;
     protected int _seconds;
 
+    public BaseActivity(string name, string description)
+    {
+        _name = name;
+        _description = description;
+    }
+
     // BaseActivity(string name, string description)
     // {
     //     _name = name;

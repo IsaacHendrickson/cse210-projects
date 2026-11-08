@@ -1,9 +1,7 @@
 class CountingActivity : BaseActivity
 {
-    public CountingActivity(string name, string description)
+    public CountingActivity(string name, string description) : base(name, description)
     {
-        _name = name;
-        _description = description;
     }
 
     public void Counting()
