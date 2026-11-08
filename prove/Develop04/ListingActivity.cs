@@ -29,6 +29,8 @@ class ListingActivity : BaseActivity
         CountDown(5);
         
         DateTime endTime = DateTime.Now.AddSeconds(_seconds); 
+        Console.Write(" ");
+        Console.CursorLeft--;
         while(endTime > DateTime.Now)
         {
             Console.CursorVisible = true;
